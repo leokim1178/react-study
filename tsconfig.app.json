@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
+    // 리액트 앱에 맞게 조정된 설정
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
     "target": "ES2022",
     "useDefineForClassFields": true,
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "module": "ESNext",
-    "types": ["vite/client"],
+    "types": ["vite/client"], // 이부분이 기존 vite-env.d.ts의 역할을 대신합니다. .svg, .png 같은 정적 자산(Static Assets) import 시 타입 에러 방지
     "skipLibCheck": true,
 
     /* Bundler mode */
