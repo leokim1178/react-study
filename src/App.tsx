@@ -1,36 +1,11 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
-
-function App() {
-  // 애플리케이션의 대표적인 컴포넌트를 정의하는 곳
-  const [count, setCount] = useState(0);
-
+export default function App() {
   return (
+    // 문자열 없이 html과 유사한 문법을 쓸 수 있다.
+    // 이 문법을 JSX라고 부른다.
+    // jsx 문법 : javascript + xml
+    // jsx ----트랜스파일러(ESBuild)---> javascript
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1>App Component</h1>
     </>
   );
 }
-
-export default App;
