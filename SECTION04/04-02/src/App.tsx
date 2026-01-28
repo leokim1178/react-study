@@ -14,6 +14,21 @@ export default function App() {
   return (
     <>
       <h2>참조 자료형 출력</h2>
+      {/* <p>배열: {referenceArray}</p> -> 중괄호 안에 배열을 넣으면 각각의 요소를 평가해서 html로 렌더링한다*/}
+      <p>배열: {referenceArray.join(", ")}</p>
+      {/* <p>객체 : {referenceObject}</p> -> react는 객체로 되어있는것을 표현하지 못한다 */}
+      <p>객체 : {JSON.stringify(referenceObject)}</p>
+      {/* <p>함수 : {referenceFunction}</p> -> 함수도 JSX에서 바로 출력할 수 없다 */}
+      <p>함수 : {referenceFunction.toString()}</p>
+      <p>날짜 : {referenceDate.toString()}</p>
+      <p>정규식 : {referenceRegExp.toString()}</p>
+      <p>
+        Map :{" "}
+        {Array.from(referenceMap).map(([key, value]) => `${key} => ${value} `)}
+      </p>
+      <p> Map2 : {JSON.stringify(Array.from(referenceMap))}</p>
+      <p>Set : {Array.from(referenceSet).join(", ")}</p>
+      <p>Set2 : {JSON.stringify(Array.from(referenceSet))}</p>
     </>
   );
 }
