@@ -1,6 +1,6 @@
-import Footer from "./Footer";
-import Header from "./Header";
-import Home from "./Home";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Main from "./components/main";
 
 export default function App() {
   // 1. 함수로 작성되어야 함
@@ -8,7 +8,7 @@ export default function App() {
   return (
     <>
       <Header />
-      <Home />
+      <Main />
       <Footer />
     </>
   );
